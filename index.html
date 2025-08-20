@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KC LOCKS — Today’s Free Pick</title>
+  <meta name="description" content="Today’s free pick with 60‑second logic. Educational only. 21+. No guarantees.">
+
+  <style>
+    :root{
+      --bg: #07090b;
+      --panel: #0b0f12;
+      --panel-2: #0f1418;
+      --text: #e7f5ec;
+      --muted: #93a39a;
+      --grid: #11171c;
+      --neon: #19ff87;
+      --neon-2: #12d36f;
+      --neon-dim: #0aa85a;
+      --shadow: 0 0 16px rgba(25,255,135,0.18), 0 0 48px rgba(25,255,135,0.07);
+      --max: 780px;
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{
+      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(25,255,135,0.06), transparent 60%),
+        radial-gradient(900px 500px at -10% 90%, rgba(25,255,135,0.05), transparent 55%),
+        linear-gradient(180deg, #050607 0%, #07090b 100%);
+      color:var(--text);
+    }
+    .wrap{max-width:var(--max);margin:0 auto;padding:20px}
+    header{padding:14px 0 6px;border-bottom:1px solid var(--grid);margin-bottom:14px}
+    h1{margin:0 0 4px;font-size:24px;letter-spacing:.2px}
+    .sub{margin:0;color:var(--muted);font-size:13px}
+    h2{margin:0 0 10px;font-size:18px}
+    .card{
+      background:linear-gradient(180deg,var(--panel),var(--panel-2));
+      border:1px solid var(--grid);
+      border-radius:var(--radius);
+      padding:16px;
+      margin:14px 0;
+      box-shadow:0 0 0 1px rgba(25,255,135,0.03) inset;
+    }
+    .kv{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}
+    .kv b{color:#d4ffe8}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
+    .muted{color:var(--muted)}
+    .small{font-size:13px}
+    .cta{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+      margin:18px 0 4px;
+    }
+    @media (max-width:560px){ .cta{grid-template-columns:1fr} }
+    .btn{
+      display:flex;align-items:center;justify-content:center;
+      text-decoration:none;text-transform:none;
+      font-weight:800;letter-spacing:.2px;
+      padding:16px;
+      border-radius:10px;
+      background:var(--neon);
+      color:#001a0b;
+      border:1px solid rgba(25,255,135,0.6);
+      box-shadow: var(--shadow);
+      transition:transform .06s ease, box-shadow .2s ease, background .1s ease;
+    }
+    .btn:hover{background:var(--neon-2);box-shadow:0 0 20px rgba(25,255,135,0.26),0 0 60px rgba(25,255,135,0.12)}
+    .btn:active{background:var(--neon-dim);transform:translateY(1px)}
+    .btn .emoji{margin-right:8px;filter:drop-shadow(0 0 8px rgba(25,255,135,0.5))}
+    .divider{height:1px;background:var(--grid);margin:16px 0}
+    footer{margin:20px 0 10px}
+  </style>
+
+  <!-- Meta Pixel (replace YOUR_PIXEL_ID) -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+  <!-- Google Analytics 4 (optional; replace G-XXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date()); gtag('config','G-XXXXXXX');
+  </script>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>KC LOCKS — Today’s Free Pick (ET)</h1>
+      <p class="sub">Educational only. 21+. No guarantees.</p>
+    </header>
+
+    <!-- Graphic panel -->
+    <section class="card">
+      <h2>Play of the Day</h2>
+      <div style="border-radius:10px;overflow:hidden;border:1px solid var(--grid)">
+        <img src="daily-play-graphic.jpg?v=1" alt="Play of the Day" style="display:block;width:100%;height:auto">
+      </div>
+      <p class="small muted" style="margin-top:8px">Overwrite <b>daily-play-graphic.jpg</b> each day (keep the same name) so you don’t have to edit this file.</p>
+    </section>
+
+    <section class="card">
+      <h2>Official Play</h2>
+      <p class="kv"><b>Matchup:</b> [Road] @ [Home] — <span class="muted">[Time ET]</span></p>
+      <p class="kv"><b>Play:</b> <span>[TEAM / LINE / PRICE] — [Units]</span></p>
+      <p class="kv"><b>Bet to:</b> <span>[-145]</span></p>
+      <p class="kv"><b>Posted:</b> <span>[HH:MM ET]</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Why (60‑sec logic)</h2>
+      <ul>
+        <li><b>SP edge:</b> [1 line]</li>
+        <li><b>Offense vs hand (last 30):</b> [1 line]</li>
+        <li><b>Bullpen fatigue/usage:</b> [1 line]</li>
+        <li><b>We passed on:</b> [what/why]</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Timing note</h2>
+      <p class="small">[Expect movement around __ if __.]</p>
+    </section>
+
+    <section class="card">
+      <div class="cta">
+        <a class="btn" id="ebookBtn"
+           href="https://YOUR-EBOOK-URL?utm_source=picklocker&utm_medium=button&utm_campaign=ebook_v1&utm_content=bottom_btn">
+           <span class="emoji">📘</span> Get the System (Ebook $30)
+        </a>
+        <a class="btn" id="trialBtn"
+           href="https://YOUR-TRIAL-URL?utm_source=picklocker&utm_medium=button&utm_campaign=trial_v1&utm_content=bottom_btn">
+           <span class="emoji">🔒</span> 3‑Day Trial ($7) — Private Feed
+        </a>
+      </div>
+      <p class="small muted">Choose one: learn the system or see it applied daily.</p>
+    </section>
+
+    <section class="card small">
+      <p><b>Last 7 days:</b> [W‑L‑P], <b>Units:</b> [+X.X] • <span class="muted">Sample size is small; process &gt; single result.</span></p>
+    </section>
+
+    <footer>
+      <div class="divider"></div>
+      <p class="small muted">KC LOCKS is for informational/educational purposes only. 21+. Bet responsibly. No guarantees.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('ebookBtn').addEventListener('click', function(){
+      try{ fbq('trackCustom','EbookClick'); }catch(e){}
+      try{ gtag('event','click', {event_category:'CTA', event_label:'Ebook'}); }catch(e){}
+    });
+    document.getElementById('trialBtn').addEventListener('click', function(){
+      try{ fbq('trackCustom','TrialClick'); }catch(e){}
+      try{ gtag('event','click', {event_category:'CTA', event_label:'Trial'}); }catch(e){}
+    });
+  </script>
+</body>
+</html>
