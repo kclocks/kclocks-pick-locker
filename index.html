@@ -112,22 +112,25 @@
     </section>
 
     <section class="card">
-      <h2>Official Play</h2>
-      <p class="kv"><b>Matchup:</b> [Road] @ [Home] — <span class="muted">[Time ET]</span></p>
-      <p class="kv"><b>Play:</b> <span>[TEAM / LINE / PRICE] — [Units]</span></p>
-      <p class="kv"><b>Bet to:</b> <span>[-145]</span></p>
-      <p class="kv"><b>Posted:</b> <span>[HH:MM ET]</span></p>
-    </section>
+     <section class="card" id="official">
+  <h2>Official Play</h2>
+  <p class="kv"><b>Matchup:</b> <span id="matchup">[Road] @ [Home]</span> — <span class="muted" id="timeEt">[Time ET]</span></p>
+  <p class="kv"><b>Play:</b> <span id="play">[TEAM / LINE / PRICE] — [Units]</span></p>
+  <p class="kv"><b>Bet to:</b> <span id="betTo">[-145]</span></p>
+  <p class="kv"><b>Posted:</b> <span id="posted">[HH:MM ET]</span></p>
+</section>
 
-    <section class="card">
-      <h2>Why (60‑sec logic)</h2>
-      <ul>
-        <li><b>SP edge:</b> [1 line]</li>
-        <li><b>Offense vs hand (last 30):</b> [1 line]</li>
-        <li><b>Bullpen fatigue/usage:</b> [1 line]</li>
-        <li><b>We passed on:</b> [what/why]</li>
-      </ul>
-    </section>
+
+    <section class="card" id="why">
+  <h2>Why (60-sec logic)</h2>
+  <ul>
+    <li><b>SP edge:</b> <span id="why1">[1 line]</span></li>
+    <li><b>Offense vs hand (last 30):</b> <span id="why2">[1 line]</span></li>
+    <li><b>Bullpen fatigue/usage:</b> <span id="why3">[1 line]</span></li>
+    <li><b>We passed on:</b> <span id="why4">[what/why]</span></li>
+  </ul>
+</section>
+
 
     <section class="card">
       <div class="cta">
@@ -164,4 +167,38 @@
     });
   </script>
 </body>
+  <!-- DAILY DATA (edit this JSON only each day) -->
+<script id="pod" type="application/json">
+{
+  "matchup": "USF @ Boise State",
+  "timeEt": "5:30 PM ET",
+  "play": "USF +5.5 (-105) — 0.5u",
+  "betTo": "+6.5",
+  "posted": "1:40 AM ET",
+  "why": {
+    "sp": "QB Byrum Brown returning after strong 2024 finish; dual-threat profile stresses Boise front.",
+    "hand": "USF defense rebuilt in transfer portal; expected to limit Boise’s ground game that drove their late-season surge.",
+    "pen": "Situational edge: Bulls return 17 starters with continuity, while Boise breaking in new OC/QB tandem.",
+    "pass": "Skipped ML and total — Week 0 variance + road environment; spread best value angle."
+  }
+}
+
+</script>
+
+<!-- RENDERER: maps JSON to the page -->
+<script>
+(function(){
+  function set(id, val){ var el=document.getElementById(id); if(el) el.textContent = val; }
+  try{
+    var data = JSON.parse(document.getElementById('pod').textContent.trim());
+    set('matchup', data.matchup); set('timeEt', data.timeEt);
+    set('play', data.play); set('betTo', data.betTo); set('posted', data.posted);
+    set('why1', data.why?.sp||''); set('why2', data.why?.hand||'');
+    set('why3', data.why?.pen||''); set('why4', data.why?.pass||'');
+    set('timingNote', data.timingNote||''); set('last7', data.last7||''); set('units', data.units||'');
+    var g=document.getElementById('graphic'); if(g&&data.graphic){ g.src=data.graphic; }
+  }catch(e){ console.error('POD data error:', e); }
+})();
+</script>
+
 </html>
