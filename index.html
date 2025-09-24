@@ -38,7 +38,6 @@
             color: #9ca3af;
             margin-top: 10px;
         }
-        /* The form itself will be controlled by beehiiv's script */
         .form-container {
             margin-bottom: 30px;
         }
@@ -65,13 +64,14 @@
 
         <div class="form-container">
             <!-- 
-              CRITICAL STEP: 
-              This is the beehiiv embed script. It will automatically find this div
-              and replace it with your styled form. The 'data-form-id' is the only
-              thing you might ever need to change.
+              ==================================================================
+              BEEHIIV EMBED CODE GOES HERE
+              ==================================================================
             -->
-            <div data-beehiiv-form-widget data-form-id="70a5a07e-9201-46b3-b078-cec3a8e7687a"></div>
-            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script><iframe src="https://subscribe-forms.beehiiv.com/70a5a07e-9201-46b3-b078-cec3a8e7687a" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 660px; height: 415px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
+
+            <!-- End of beehiiv embed -->
         </div>
 
         <div class="social-proof">
@@ -84,5 +84,4 @@
     </div>
 </body>
 </html>
-
 
