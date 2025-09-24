@@ -10,7 +10,7 @@
     <style>
         body, html {
             margin: 0;
-            padding: 0; 
+            padding: 0;
             font-family: 'Inter', sans-serif;
             background-color: #0a0a0a;
             color: #e5e7eb;
@@ -82,25 +82,42 @@
             font-size: 0.875rem;
             color: #6b7280;
         }
+        /* LOADER STYLES FROM MAILERLITE - DO NOT REMOVE */
+        .ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }
+        .ml-form-embedSubmitLoad:after { content: " "; display: block; width: 11px; height: 11px; margin: 1px; border-radius: 50%; border: 4px solid #fff; border-color: #ffffff #ffffff #ffffff transparent; animation: ml-form-embedSubmitLoad 1.2s linear infinite; }
+        @keyframes ml-form-embedSubmitLoad { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Get Your Data-Driven<br><span>Free Pick of the Day.</span></h1>
+            <h1>Get Your Data-Driven<br><span>Free Play of the Day.</span></h1>
             <p>No Hype. No BS. Just Analysis.</p>
         </div>
 
         <div class="form-container">
-            <!-- 
-              CRITICAL STEP: 
-              Replace the placeholder URL in the 'action' attribute below 
-              with the unique Form Action URL from your email marketing service (e.g., Mailchimp).
-            -->
-            <form action="https://assets.mailerlite.com/jsonp/1814719/forms/166393382530188734/subscribe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" method="POST" target="_blank">
-                <input type="email" name="EMAIL" class="email-input" placeholder="Enter your best email" required>
-                <button type="submit" class="submit-button">Unlock Today's Pick 🎯</button>
-            </form>
+             <!-- IMPORTANT: This is the MailerLite Form Wrapper. Do not remove it. -->
+            <div id="mlb2-31243930" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31243930">
+                <div class="ml-form-embedWrapper embedForm">
+                    <!-- The form action is now handled by the JavaScript below -->
+                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1814719/forms/166393382530188734/subscribe" data-code="" method="post">
+                        <input type="email" name="fields[email]" class="email-input" placeholder="Enter your best email" required>
+                        
+                        <!-- Hidden Fields from MailerLite -->
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
+
+                        <div class="ml-form-embedSubmit">
+                            <button type="submit" class="submit-button primary">Unlock Today's Analysis 🎯</button>
+                            <button disabled="disabled" style="display: none;" type="button" class="loading">
+                                <div class="ml-form-embedSubmitLoad"></div>
+                                <span class="sr-only">Loading...</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <div class="social-proof">
@@ -111,6 +128,17 @@
             <p>&copy; 2025 KC Locks. All Rights Reserved.</p>
         </div>
     </div>
+
+    <!-- IMPORTANT: MAILERLITE JAVASCRIPT - DO NOT REMOVE -->
+    <script>
+        function ml_webform_success_31243930() {
+            var url = 'https://picks.kclocks.vip/picks.html';
+            window.location.href = url;
+        }
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+    <!-- END MAILERLITE JAVASCRIPT -->
+
 </body>
 </html>
 
