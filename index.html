@@ -38,42 +38,14 @@
             color: #9ca3af;
             margin-top: 10px;
         }
+        /* The form itself will be controlled by beehiiv's script */
         .form-container {
-            background-color: #1a1a1a;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #374151;
             margin-bottom: 30px;
-        }
-        .email-input {
-            width: 100%;
-            padding: 16px;
-            font-size: 1rem;
-            border-radius: 8px;
-            border: 1px solid #4b5563;
-            background-color: #374151;
-            color: #ffffff;
-            box-sizing: border-box;
-            margin-bottom: 20px;
-        }
-        .submit-button {
-            width: 100%;
-            padding: 16px;
-            font-size: 1.125rem;
-            font-weight: 700;
-            border-radius: 8px;
-            border: none;
-            background-color: #22c55e;
-            color: #0a0a0a;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
-        }
-        .submit-button:hover {
-            background-color: #16a34a;
         }
         .social-proof {
             font-size: 1rem;
             color: #9ca3af;
+            margin-top: 30px;
         }
         .social-proof strong {
             color: #ffffff;
@@ -82,11 +54,6 @@
             font-size: 0.875rem;
             color: #6b7280;
         }
-        /* LOADER STYLES FROM MAILERLITE - DO NOT REMOVE */
-        .ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }
-        .ml-form-embedSubmitLoad:after { content: " "; display: block; width: 11px; height: 11px; margin: 1px; border-radius: 50%; border: 4px solid #fff; border-color: #ffffff #ffffff #ffffff transparent; animation: ml-form-embedSubmitLoad 1.2s linear infinite; }
-        @keyframes ml-form-embedSubmitLoad { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
 </head>
 <body>
@@ -97,27 +64,14 @@
         </div>
 
         <div class="form-container">
-             <!-- IMPORTANT: This is the MailerLite Form Wrapper. Do not remove it. -->
-            <div id="mlb2-31243930" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-31243930">
-                <div class="ml-form-embedWrapper embedForm">
-                    <!-- The form action is now handled by the JavaScript below -->
-                    <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1814719/forms/166393382530188734/subscribe" data-code="" method="post">
-                        <input type="email" name="fields[email]" class="email-input" placeholder="Enter your best email" required>
-                        
-                        <!-- Hidden Fields from MailerLite -->
-                        <input type="hidden" name="ml-submit" value="1">
-                        <input type="hidden" name="anticsrf" value="true">
-
-                        <div class="ml-form-embedSubmit">
-                            <button type="submit" class="submit-button primary">Unlock Today's Analysis 🎯</button>
-                            <button disabled="disabled" style="display: none;" type="button" class="loading">
-                                <div class="ml-form-embedSubmitLoad"></div>
-                                <span class="sr-only">Loading...</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <!-- 
+              CRITICAL STEP: 
+              This is the beehiiv embed script. It will automatically find this div
+              and replace it with your styled form. The 'data-form-id' is the only
+              thing you might ever need to change.
+            -->
+            <div data-beehiiv-form-widget data-form-id="70a5a07e-9201-46b3-b078-cec3a8e7687a"></div>
+            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
         </div>
 
         <div class="social-proof">
@@ -128,17 +82,7 @@
             <p>&copy; 2025 KC Locks. All Rights Reserved.</p>
         </div>
     </div>
-
-    <!-- IMPORTANT: MAILERLITE JAVASCRIPT - DO NOT REMOVE -->
-    <script>
-        function ml_webform_success_31243930() {
-            var url = 'https://picks.kclocks.vip/picks.html';
-            window.location.href = url;
-        }
-    </script>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
-    <!-- END MAILERLITE JAVASCRIPT -->
-
 </body>
 </html>
+
 
